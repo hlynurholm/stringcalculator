@@ -11,7 +11,9 @@ function add(number){
 			if(parseInt(numArray[i]) < 0){
 				neg.push(parseInt(numArray[i]));
 			}
-			sum += parseInt(numArray[i]);
+			if(!(parseInt(numArray[i]) > 1000)){
+				sum += parseInt(numArray[i]);
+			}
 		}
 		if(neg.length > 0){
 			throw "Negatives not allowed: $[negatives.join(', ')}";

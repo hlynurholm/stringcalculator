@@ -15,3 +15,7 @@ it("should throw exeption", () => {
 it("should return sum of multiple numbers divided by commas and new line", () => {
 	expect(add("1\n2,3")).toBe(6);
 });
+
+it("should return sum of multiple numbers", () => {
+	expect(add("1,1002")).toBe(1);
+});
