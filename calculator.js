@@ -6,10 +6,18 @@ function add(number){
 	if(number.includes(",") || number.includes("\\n")){
 		var numArray = number.split(/[\n,]/);
 		var sum = 0;
+		const neg = []
 		for(var i = 0; i < numArray.length; i++){
+			if(parseInt(numArray[i]) < 0){
+				neg.push(parseInt(numArray[i]));
+			}
 			sum += parseInt(numArray[i]);
 		}
-		return sum;
+		if(neg.length > 0){
+			throw "Negatives not allowed: $[negatives.join(', ')}";
+		}else{
+			return sum;
+		}
 	}
 
 }

@@ -8,8 +8,8 @@ it("should return sum of multiple numbers", () => {
 	expect(add("1,2,3,4")).toBe(10);
 });
 
-it("should return sum of multiple numbers (also negative numbers", () => {
-	expect(add("1,2,-3,4")).toBe(4);
+it("should throw exeption", () => {
+	expect(() => add("3,6,8,-6\n,5")).toThrow();
 });
 
 it("should return sum of multiple numbers divided by commas and new line", () => {
